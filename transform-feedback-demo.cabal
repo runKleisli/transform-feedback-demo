@@ -1,0 +1,51 @@
+name:                transform-feedback-demo
+version:             0.0.0
+synopsis:            Transform feedback - reading calculations from the GPU
+description:         Demonstrates the OpenGL feature of transform
+  feedback using GLUtil & Vinyl-GL. Transform feedback lets you
+  read things shader programs have computed on the GPU, normally
+  not sent back to the CPU. This is used to do GPGPU computing.
+  GLFW is used for the rendering context.
+license:             OtherLicense
+license-file:        LICENSE.md
+author:              Rand Kleisli
+maintainer:          runKleisli@openmailbox.org
+category:            GPU
+build-type:          Simple
+extra-source-files:  README.md
+data-files:          etc/*.frag, etc/*.vert
+cabal-version:       >=1.10
+
+library
+  exposed-modules: Graphics.GLUtil.BufferObjects.Feedback
+  hs-source-dirs:  libsrc
+  ghc-options:     -Odph -Wall
+
+  build-depends:  base >= 4.2 && < 5,
+                  bytestring,
+                  array,
+                  containers >= 0.5,
+                  linear >= 1.1.3,
+                  OpenGL >= 2.9,
+                  vector >= 0.7
+  default-language:  Haskell2010
+
+executable FeedbackDemo
+  main-is:        FeedbackDemo.hs
+  other-modules:  FeedbackProg, FeedbackProg2
+  hs-source-dirs: src
+  ghc-options:    -Wall -rtsopts -O3
+
+  build-depends:  base > 4.5 && < 5,
+                  transform-feedback-demo,
+                  OpenGL >= 2.9.2,
+                  GLFW-b >= 1.4,
+                  GLUtil >= 0.7,
+                  vinyl >= 0.4,
+                  vinyl-gl >= 0.2,
+                  linear >= 1.1,
+                  array,
+                  bytestring,
+                  directory >= 1.2,
+                  filepath ==1.3.*
+  default-language:  Haskell2010
