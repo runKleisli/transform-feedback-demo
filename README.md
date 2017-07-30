@@ -42,6 +42,6 @@ generally.
 
 For ideas on how Haskell's transform feedback capabilities can
 develop further, as well as an idea of what the raw OpenGL would
-look like, please cross-reference with <open.gl/feedback>. An
+look like, please cross-reference with [open.gl/feedback](https://open.gl/feedback). An
 expository cross-examination between that and a Haskell example
 may come in the future.
