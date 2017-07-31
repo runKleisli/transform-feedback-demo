@@ -6,6 +6,7 @@ description:         Demonstrates the OpenGL feature of transform
   read things shader programs have computed on the GPU, normally
   not sent back to the CPU. This is used to do GPGPU computing.
   GLFW is used for the rendering context.
+homepage:            https://github.com/runKleisli/transform-feedback-demo
 license:             OtherLicense
 license-file:        LICENSE.md
 author:              Rand Kleisli
@@ -15,6 +16,10 @@ build-type:          Simple
 extra-source-files:  README.md
 data-files:          etc/*.frag, etc/*.vert
 cabal-version:       >=1.10
+
+source-repository head
+  type:      git
+  location:  https://github.com/runKleisli/transform-feedback-demo.git
 
 library
   exposed-modules: Graphics.GLUtil.BufferObjects.Feedback
