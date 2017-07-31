@@ -14,7 +14,7 @@ maintainer:          runKleisli@openmailbox.org
 category:            GPU
 build-type:          Simple
 extra-source-files:  README.md
-data-files:          etc/*.frag, etc/*.vert
+data-files:          etc/*.vert
 cabal-version:       >=1.10
 
 source-repository head
